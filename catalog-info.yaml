@@ -5,6 +5,6 @@ metadata:
   annotations:
     github.com/project-slug: mishraabhay2010/test
 spec:
-  type: other
+  type: website
   lifecycle: unknown
   owner: guests
