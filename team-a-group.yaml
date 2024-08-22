@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: team-a
+  description: The A team responsible for the .NET Core Web API project
+spec:
+  type: team
+  profile:
+    displayName: Team A
+    email: team-a@example.com
+  members:
+    - user:default/john.doe
+    - user:default/jane.doe
+  parent: department:default/engineering
