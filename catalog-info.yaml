@@ -1,11 +1,4 @@
 apiVersion: backstage.io/v1alpha1
-kind: Location
-metadata:
-  name: team-a-group
-spec:
-  type: url
-  target: https://github.com/mishraabhay2010/test/blob/main/team-a-group.yaml
-apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: dotnetcore-webapi
@@ -25,6 +18,14 @@ spec:
       title: Source Code
     - url: https://github.com/mishraabhay2010/test
       title: Documentation
+---
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: team-a-group
+spec:
+  type: url
+  target: https://github.com/mishraabhay2010/test/blob/main/team-a-group.yaml
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
