@@ -1,10 +1,51 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: test
-  annotations:
-    github.com/project-slug: mishraabhay2010/test
+  name: dotnetcore-webapi
+  description: A .NET Core Web API project with .NET 8
+  tags:
+    - dotnetcore
+    - webapi
+    - net8
 spec:
-  type: website
-  lifecycle: unknown
-  owner: guests
+  type: service
+  lifecycle: production
+  owner: team-a
+  system: examples
+  providesApis: [dotnetcore-webapi-api]
+  links:
+    - url: https://github.com/mishraabhay2010/test
+      title: Source Code
+    - url: https://github.com/mishraabhay2010/test
+      title: Documentation
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: dotnetcore-webapi-api
+  description: API definition for the .NET Core Web API project
+spec:
+  type: openapi
+  lifecycle: production
+  owner: team-a
+  system: examples
+  definition: |
+    openapi: 3.0.0
+    info:
+      title: DotNetCore WebAPI
+      version: 1.0.0
+    paths:
+      /example:
+        get:
+          summary: Example endpoint
+          responses:
+            '200':
+              description: Successful response
+              content:
+                application/json:
+                  schema:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+                        example: Hello, World!
