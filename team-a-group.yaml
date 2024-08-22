@@ -9,6 +9,6 @@ spec:
     displayName: Team A
     email: team-a@example.com
   members:
-    - user:default/john.doe
+    - user:default/mishraabhay2010
     - user:default/jane.doe
   parent: department:default/engineering
