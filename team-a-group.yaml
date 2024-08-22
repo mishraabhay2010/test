@@ -5,6 +5,7 @@ metadata:
   description: The A team responsible for the .NET Core Web API project
 spec:
   type: team
+  children: []
   profile:
     displayName: Team A
     email: team-a@example.com
