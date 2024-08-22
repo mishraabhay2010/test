@@ -1,8 +1,8 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: dotnetcore-webapi-template
-  title: .NET Core Web API Template
+  name: dotnetcore-webapi-template1
+  title: .NET Core Web API Template1
   description: Template for creating a .NET Core Web API project with .NET 8
   tags:
     - dotnetcore
@@ -28,6 +28,13 @@ spec:
       input:
         repoUrl: https://github.com/mishraabhay2010/test
         description: A .NET Core Web API project with .NET 8
+    # The final step is to register our new component in the catalog.
+    - id: register
+      name: Register
+      action: catalog:register
+      input:
+        repoContentsUrl: ${{ steps['publish'].output.repoContentsUrl }}
+        catalogInfoPath: '/catalog-info.yaml'
   output:
     - name: repoUrl
       description: The URL of the created repository
