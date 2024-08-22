@@ -1,0 +1,46 @@
+apiVersion: backstage.io/v1alpha1
+kind: Template
+metadata:
+  name: dotnetcore-webapi-template
+  title: .NET Core Web API Template
+  description: Template for creating a .NET Core Web API project with .NET 8
+  tags:
+    - dotnetcore
+    - webapi
+    - net8
+spec:
+  owner: team-a
+  type: service
+  steps:
+    - id: fetch
+      name: Fetch
+      action: fetch:template
+      input:
+        url: ./template
+    - id: skeleton
+      name: Skeleton
+      action: skeleton:dotnetcore-webapi
+      input:
+        repoUrl: https://github.com/mishraabhay2010/test
+    - id: publish
+      name: Publish
+      action: publish:github
+      input:
+        repoUrl: https://github.com/mishraabhay2010/test
+        description: A .NET Core Web API project with .NET 8
+  output:
+    - name: repoUrl
+      description: The URL of the created repository
+  parameters:
+    - title: Project Name
+      description: The name of the project
+      type: string
+      required: true
+    - title: Description
+      description: A short description of the project
+      type: string
+      required: true
+    - title: Owner
+      description: The owner of the project
+      type: string
+      required: true
