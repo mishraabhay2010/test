@@ -9,7 +9,7 @@ metadata:
     - webapi
     - net8
 spec:
-  owner: team-a
+  owner: user:mishraabhay2010
   type: service
   steps:
     - id: fetch
