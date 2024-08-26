@@ -20,7 +20,7 @@ spec:
       title: Source Code
     - url: https://github.com/mishraabhay2010/netcore
       title: Documentation
-    - url: https://github.com/mishraabhay2010/netcore/actions
+    - url: https://github.com/mishraabhay2010/test/blob/main/.github/workflows
       title: CI/CD Pipeline
 ---
 apiVersion: backstage.io/v1alpha1
