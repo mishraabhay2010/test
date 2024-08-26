@@ -7,6 +7,9 @@ metadata:
     - dotnetcore
     - webapi
     - net8
+  annotations:
+    github.com/project-slug: mishraabhay2010/netcore
+    jenkins.io/github-folder: https://jenkins.example.com/job/dotnetcore-webapi
 spec:
   type: service
   lifecycle: production
