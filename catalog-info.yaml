@@ -7,9 +7,6 @@ metadata:
     - dotnetcore
     - webapi
     - net8
-  annotations:
-    github.com/project-slug: mishraabhay2010/netcore
-    jenkins.io/github-folder: https://jenkins.example.com/job/dotnetcore-webapi
 spec:
   type: service
   lifecycle: production
@@ -21,34 +18,5 @@ spec:
       title: Source Code
     - url: https://github.com/mishraabhay2010/netcore
       title: Documentation
----
-apiVersion: backstage.io/v1alpha1
-kind: API
-metadata:
-  name: dotnetcore-webapi-api
-  description: API definition for the .NET Core Web API project
-spec:
-  type: openapi
-  lifecycle: production
-  owner: team-a
-  system: examples
-  definition: |
-    openapi: 3.0.0
-    info:
-      title: DotNetCore WebAPI
-      version: 1.0.0
-    paths:
-      /example:
-        get:
-          summary: Example endpoint
-          responses:
-            '200':
-              description: Successful response
-              content:
-                application/json:
-                  schema:
-                    type: object
-                    properties:
-                      message:
-                        type: string
-                        example: Hello, World!
+    - url: https://github.com/mishraabhay2010/netcore/actions
+      title: CI/CD Pipeline
