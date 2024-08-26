@@ -1,0 +1,76 @@
+pipelines:
+  backstage:
+    group: defaultGroup
+    label_template: "${COUNT}"
+    materials:
+      git:
+        url: https://github.com/mishraabhay2010/netcore
+        branch: main
+    stages:
+      - name: Build
+        jobs:
+          - name: Build
+            tasks:
+              - exec:
+                  command: dotnet
+                  arguments: ["build"]
+      - name: Test
+        jobs:
+          - name: Test
+            tasks:
+              - exec:
+                  command: dotnet
+                  arguments: ["test"]
+
+  backstage-pr:
+    group: defaultGroup
+    label_template: "${COUNT}"
+    materials:
+      git:
+        url: https://github.com/mishraabhay2010/netcore
+        branch: develop
+    stages:
+      - name: Build
+        jobs:
+          - name: Build
+            tasks:
+              - exec:
+                  command: dotnet
+                  arguments: ["build"]
+      - name: Test
+        jobs:
+          - name: Test
+            tasks:
+              - exec:
+                  command: dotnet
+                  arguments: ["test"]
+
+  backstage-builder:
+    group: defaultGroup
+    label_template: "${COUNT}"
+    materials:
+      git:
+        url: https://github.com/mishraabhay2010/netcore
+        branch: builder
+    stages:
+      - name: Build
+        jobs:
+          - name: Build
+            tasks:
+              - exec:
+                  command: dotnet
+                  arguments: ["build"]
+      - name: Test
+        jobs:
+          - name: Test
+            tasks:
+              - exec:
+                  command: dotnet
+                  arguments: ["test"]
+      - name: Deploy
+        jobs:
+          - name: Deploy
+            tasks:
+              - exec:
+                  command: dotnet
+                  arguments: ["publish", "-c", "Release", "-o", "./publish"]
