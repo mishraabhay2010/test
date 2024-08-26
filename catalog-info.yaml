@@ -3,9 +3,6 @@ kind: Component
 metadata:
   name: dotnetcore-webapi
   description: A .NET Core Web API project with .NET 8
-  annotations:
-    github.com/project-slug: mishraabhay2010/test
-    jenkins.io/github-folder: https://jenkins.example.com/job/team-a-group
   tags:
     - dotnetcore
     - webapi
