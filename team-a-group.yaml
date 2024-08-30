@@ -14,17 +14,3 @@ spec:
     - user:jane.doe
     - user:Adityatomar1
   parent: department:default/engineering
-kind: Group
-metadata:
-  name: team-b
-  description: The A team responsible for the .NET Core Web API project
-spec:
-  type: team
-  children: []
-  profile:
-    displayName: Team B
-    email: team-a@example.com
-  members:
-    - user:mishraabhay2013
-    - user:Adityatomar1
-  parent: department:default/engineering
