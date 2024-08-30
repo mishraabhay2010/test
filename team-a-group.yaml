@@ -14,6 +14,7 @@ spec:
     - user:jane.doe
     - user:Adityatomar1
   parent: department:default/engineering
+---
 kind: Group
 metadata:
   name: team-b
@@ -23,7 +24,7 @@ spec:
   children: []
   profile:
     displayName: Team B
-    email: team-a@example.com
+    email: mishraabhay2013@gmail.com
   members:
     - user:mishraabhay2013
     - user:Adityatomar1
