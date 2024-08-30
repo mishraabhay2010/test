@@ -14,3 +14,19 @@ spec:
     - user:jane.doe
     - user:Adityatomar1
   parent: department:default/engineering
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: team-b
+  description: The B team responsible for the Java Spring Boot project
+spec:
+  type: team
+  children: []
+  profile:
+    displayName: Team B
+    email: team-b@example.com
+  members:
+    - user:mishraabhay2013
+  parent: department:default/engineering
