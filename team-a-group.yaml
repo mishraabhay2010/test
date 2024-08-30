@@ -13,5 +13,4 @@ spec:
     - user:mishraabhay2010
     - user:jane.doe
     - user:Adityatomar1
-    -user:mishraabhay2013
   parent: department:default/engineering
