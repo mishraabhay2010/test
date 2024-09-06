@@ -29,4 +29,5 @@ spec:
     email: team-b@example.com
   members:
     - user:mishraabhay2013
+    - user:mahitocode
   parent: department:default/engineering
